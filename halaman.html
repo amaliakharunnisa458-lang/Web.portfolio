@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <a href="#" class="logo">Farhand Tadeo</a>
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="home-img">
+            <img src="lunox (1).jpg" alt="Foto Farhand Tadeo">
+        </div>
+
+        <div class="home-content">
+            <h1>Halo, ini <span id="nama">Farhand Tadeo</span></h1>
+            <h2 class="typing-text">Saya seorang <span id="role"></span></h2>
+            <p id="deskripsi">
+                Merupakan siswa dari sekolah SMKN 40 Jakarta dengan jurusan Rekayasa Perangkat Lunak.
+            </p>
+            
+            <div class="social-icon">
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="#" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/far_.hand?igsh=MXRqcWtyeG1iNHY3aA==" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </div>
+            
+            <a href="#" id="cvBtn" class="btn">Download CV</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>Tentang Saya</h2>    
+            <div class="bagian">
+                <div style="font-size: 1.5rem; line-height: 1.6; color: black;">
+                    <h3>Biodata</h3>
+                    <p><strong>Nama:</strong> Farhand Tadeo</p>
+                    <p><strong>Kelas:</strong> 11</p>
+                    <p><strong>Jurusan:</strong> Rekayasa Perangkat Lunak</p>
+                    <p><strong>Minat:</strong> Saya berminat di bagian UI/UX, menciptakan desain UI/UX yang menarik dan fungsional.</p>
+                    
+                    <div style="margin: 20px 0;">
+                        <h3><strong>Tools Yang Dikuasai:</strong></h3>
+                        <div class="java" style="margin: 10px 0;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" width="35px" alt="Figma">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="35px" alt="VS Code">
+                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="35px" alt="HTML5">
+                              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="35px" alt="CSS3">
+                              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="35px" alt="JavaScript">
+                        </div>
+                    </div>
+                    <!---->
+                    <div>
+                        <p><strong>Keahlian Utama:</strong></p>
+                        <ul id="skillList" style="margin-top: 10px; padding-left: 20px;">
+                            <li>Pengembangan Front-End (HTML, CSS, JavaScript)</li>
+                            <li>Desain UI/UX yang estetis dan fungsional</li>
+                            <li>Pembuatan tampilan responsif di berbagai perangkat</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <h2>Education</h2>
+        <div class="pendidikan">
+            <div class="sekolah">
+                <h3>Pendidikan</h3>
+                <p>SMKN 40 jakarta ,jurusan rekayasa perangkat lunak <br>Mempelajari bahasa pemograman c#,dan juga Mempelajari bahasa HTML,CSS,JavaScript</p>
+                <p></p>
+            </div>
+            <div class="sekolah">
+                <h3>Pelatihan</h3>
+                <p>Saya memiliki pengalaman mempelajari dasar-dasar Cybersecurity melalui berbagai latihan praktis, salah satunya adalah kompetisi picoCTF – Capture The Flag </p>
+                <p></p>
+            </div>
+            <div class="sekolah">
+                <h3>UI/UX Design</h3>
+                <p>Di sisi lain saya juga mempelajari tentang UI/UX design salah satunya menggunakan aplikasi Figma</p>
+                <p></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2>Project Saya</h2>
+        <div class="project-container">
+            <div class="project-card">
+                <h3>Website Portfolio</h3>
+                <p>Membuat website portfolio dengan HTML, CSS, dan JavaScript.</p>
+                <img width="400" src="web.png" alt="Screenshot Website Portfolio">
+                
+                <h3>UI/UX Aplikasi</h3>
+                <p>Desain antarmuka aplikasi menggunakan Figma.</p>
+                <img height="300" src="figma.png" alt="Desain UI/UX di Figma">
+            </div>
+        </div>
+      </section>
+      <!---->
+    <section class="contact" id="contact">
+      <h2>Hubungi saya</h2>
+      <div class="container">
+        <div class="informasi">
+          <div class="items">
+            <div class="icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="detail">
+              <h3>Email</h3>
+              <p>amaliakharunnisa458@gmail.com</p>
+            </div>
+          </div>
+          <div class="items">
+            <div class="icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="detail">
+              <h3>Telepon</h3>
+              <p>+62-652-1214-5302</p>
+            </div>
+          </div>
+          <div class="items">
+            <div class="icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="detail">
+              <h3>Lokasi</h3>
+              <p>DKI Jakarta,Indonesia</p>
+            </div>
+          </div>
+          <div class="items">
+            <div class="icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="detail">
+              <h3>Sekolah</h3>
+              <p>SMKN 40 Jakarta</p>
+            </div>
+          </div>
+        </div>
+          <div class="feedback">
+            <form>
+              <div class="kelompok">
+                <input type="text" placeholder="Nama Lengkap" required>
+              </div>
+              <div class="kelompok">
+                <input type="email" placeholder="Email" required>
+              </div>
+              <div class="kelompok">
+                <input type="text" placeholder="subjek" required>
+              </div>
+              <div class="kelompok">
+                <textarea placeholder="Pesan yang ingin di sampaikan" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="submit">Kirim Kesan pesan</button>
+            </form>
+          </div>
+      </div>
+
+        <div class="hubungi">
+            <h3>Social account</h3>
+              <div class="Links">
+                  <a href="#" class="Link" aria-label="Linkedin">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                  </a>
+                  <a href="#" class="Link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                  </a>
+                  <a href="https://www.instagram.com/far_.hand?igsh=MXRqcWtyeG1iNHY3aA==" class="Link" aria-label="instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                  </a>
+                  <a href="#" class="Link">
+                    <i class="fab fa-tiktok"></i>
+                    <span>TikTok</span>
+                  </a>
+              </div>
+        </div>
+    </section>
+    
+</body>
+</html>

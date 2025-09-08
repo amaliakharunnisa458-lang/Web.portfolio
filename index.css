@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 70%;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    height: auto;
+    width: 100%;
+    background: linear-gradient(to right, darksalmon, blue);
+    color: cyan;
+}
+
+/* ===== Header ===== */
+header {
+    margin-top: 0;
+    padding: 1rem 10%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 20px cyan;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 3rem;
+    font-weight: 400;
+    color: whitesmoke;
+    cursor: pointer;
+    text-shadow: 0 0 25px cyan;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: white;
+    margin-left: 2rem;
+    border-bottom: 3px solid cyan;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+nav a:hover {
+    color: cyan;
+    transform: scale(1.1);
+    text-shadow: 0 0 25px cyan;
+}
+
+/* ===== Responsive Navigation ===== */
+@media (max-width: 1000px) {
+    nav {
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #b74b4b;
+        border-bottom: 30px solid #b74b4b;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem;
+        border-top: 0.1rem solid rgba(0,0,0,1);
+    }
+    
+    nav:active {
+        display: block;
+    }
+    
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    
+    nav a:hover,
+    nav a.active {
+        padding: 1rem;
+        border-radius: 1rem;
+        border-bottom: 1rem solid cyan;
+    }
+}
+
+/* ===== Section Default ===== */
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 5rem;
+}
+
+/* ===== Home Section ===== */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.home-content {
+    margin-left: 20px;
+}
+
+.home .home-content h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.3;
+    text-shadow: 0 0 25px cyan;
+}
+
+.home-content span {
+    color: whitesmoke;
+}
+
+.home-content h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.home-content p {
+    font-size: 1.25rem;
+    color: whitesmoke;
+}
+
+.home-img img {
+    position: relative;
+    width: 350px;
+    border-radius: 43%;
+    box-shadow: 0 0 25px darksalmon;
+    cursor: pointer;
+    transition: 0.5s linear;
+}
+
+.home-img img:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    box-shadow:
+        0 0 10px rgba(233, 150, 122, 0.5),
+        0 0 20px rgba(200, 170, 160, 0.4),
+        0 0 30px rgba(100, 230, 230, 0.3),
+        0 0 40px rgba(0, 255, 255, 0.2);
+}
+
+/* ===== Social Icons ===== */
+.social-icon a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 2rem 1.5rem 2rem 0;
+    border: 0.2rem solid cyan;
+    color: cyan;
+    background-color: transparent;
+    transition: 0.3s ease;
+}
+
+.social-icon a:hover {
+    color: black;
+    background-color: whitesmoke;
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 0 25px cyan;
+}
+
+/* ===== Button ===== */
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: black;
+    background-color: cyan;
+    border-radius: 2rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 0 25px cyan;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale3d(1);
+    background-color: cyan;
+    color: black;
+    box-shadow: 0 0 75px cyan;
+}
+
+/* ===== Typing Text ===== */
+.typing-text {
+    font-size: 34px;
+    font-weight: 500;
+    min-width: 200px;
+    position: relative;
+}
+
+.typing-text span::before {
+    content: "Web designer";
+    color: white;
+    animation: words 15s infinite;
+    text-shadow: 0 0 20px cyan;
+}
+
+.typing-text span::after {
+    content: "";
+    background-color: cyan;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: auto;
+    border-left: 3px solid cyan;
+    right: -8px;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor {
+    to { border-left: 3px solid cyan; }
+}
+
+@keyframes words {
+    0%, 20% { content: "Web designer"; }
+    21%, 40% { content: "Web Developer"; }
+    41%, 60% { content: "Content creator"; }
+    61%, 80% { content: "Gamers"; }
+    81%, 100% { content: "Developer"; }
+}
+
+/* ===== Media Queries Home ===== */
+@media (max-width: 1000px) {
+    .home { gap: 4rem; }
+}
+
+@media (max-width: 999px) {
+    .home {
+        flex-direction: column;
+        margin: 4rem 5rem;
+    }
+    .home .home-content h3 { font-size: 2.5rem; }
+    .home .home-content h1 { font-size: 5rem; }
+    .home-img img { width: 70vw; margin-top: 4rem; }
+}
+
+/* ===== About Section ===== */
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: left;
+    padding: 5rem 5%;
+}
+
+.about h2 {
+    font-size: 3rem;
+    text-shadow: 0 0 25px cyan;
+    margin-bottom: 3rem;
+}
+
+.bagian {
+    background-color: whitesmoke;
+    max-width: 900px;
+    width: 100%;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px cyan;
+    margin: 0 auto;
+}
+
+.bagian h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    border-bottom: 3px solid darksalmon;
+    padding-bottom: 10px;
+    color: darksalmon;
+}
+
+.bagian p,
+.bagian ul {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.java {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    box-shadow: 0 0 10px darksalmon;
+    transition: 0.3s;
+}
+
+.java:hover { transform: translateY(-5px); }
+
+@media (max-width: 768px) {
+    .bagian { text-align: center; }
+    .java { justify-content: center; }
+}
+
+.education {
+    margin-top: 150px;
+    margin-bottom: -200px;
+    padding: 50px 20px;
+    text-align: center;
+    align-self: center;
+}
+.education h2{
+    font-size: 2rem;
+    text-shadow: 0 0 25px cyan;
+}
+.pendidikan {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.sekolah {
+    background-color: whitesmoke;
+    color: black;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px cyan;
+    width: 350px;
+    transition: 0.5s ease;
+}
+.sekolah:hover{
+    transform: scale(1.1);
+}
+.sekolah h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.projects{
+    font-size: 1.5rem;
+    padding: 50px 20px;
+}
+.projects h2{
+    text-align: center;
+}
+.project-container{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.project-card{
+    background-color: whitesmoke;
+    color: black;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px cyan;
+    width: 800px;
+    transition: 0.5s ease;
+}
+.project-card h3{
+    border-bottom: 4px solid darksalmon;
+    border-left: 4px solid darksalmon;
+    border-radius: 20px;
+    padding: 10px;
+}
+.project-card img{
+    border-radius: 25px;
+}
+.contact{
+    padding: 10rem 9% 5rem;
+    text-align: center;
+}
+.contact h2{
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-shadow: 0 0 20px cyan;
+}
+
+/* Container Flex */
+.contact .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+/* Informasi Kontak */
+.contact .informasi {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact .informasi .items {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.contact .informasi .items:hover {
+    transform: translateY(-5px);
+}
+
+.contact .informasi .icon {
+    font-size: 2rem;
+    color: black;
+    margin-right: 15px;
+}
+
+.contact .informasi .detail h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.contact .informasi .detail p {
+    margin: 3px 0 0;
+    color: #555;
+}
+
+/* Feedback Form */
+.contact .feedback {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.contact .feedback form .kelompok {
+    margin-bottom: 20px;
+}
+
+.contact .feedback input,
+.contact .feedback textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    resize: none;
+    transition: border-color 0.2s ease;
+}
+
+.contact .feedback input:focus,
+.contact .feedback textarea:focus {
+    border-color: cyan;
+}
+
+.contact .feedback button.submit {
+    background-color: cyan;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.contact .feedback button.submit:hover {
+    background-color: darksalmon;
+}
+
+/* Social Links */
+.contact .hubungi {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.contact .hubungi h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: cyan;
+}
+
+.contact .hubungi .Links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.contact .hubungi .Link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: black;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.contact .hubungi .Link:hover {
+    transform: translateY(-5px);
+    background-color: cyan;
+    color: black;
+}
+
+.contact .hubungi .Link i {
+    font-size: 1.9rem;
+}
+.contact .hubungi .Link span {
+    color: black;
+}
